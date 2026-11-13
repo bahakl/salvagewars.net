@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salvage Wars: a mobile RTS where wrecks are worth fighting for</title>
+  <meta name="description" content="Salvage Wars is a mobile real-time strategy game. Your units fight on their own, and your gatherers haul wrecks home to fund the next wave. Join the Android beta.">
+  <meta name="theme-color" content="#1E3441">
+  <meta property="og:title" content="Salvage Wars">
+  <meta property="og:description" content="A mobile RTS where every wreck is worth something. Join the Android beta.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/big-shoulders-stencil-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Salvage Wars</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#how">How it plays</a>
+        <a href="#units">Units</a>
+        <a href="#campaign">Campaign</a>
+        <a href="#beta">Join the beta</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Salvage<br>Wars</h1>
+          <p class="hero-lede">A mobile strategy game where every wreck is worth something. Your units fight on their own. Your gatherers haul the scrap home.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#beta">Join the beta</a>
+            <span class="btn btn-ghost" aria-disabled="true">Google Play: coming soon</span>
+          </div>
+        </div>
+
+        <figure class="scene">
+          <svg id="wreck-loop" viewBox="0 112 640 188" role="img" aria-labelledby="scene-title">
+            <title id="scene-title">A gatherer forklift drives to a destroyed tank, lifts the wreck onto its forks, carries it to the dropoff pad and delivers it for metal.</title>
+            <rect width="640" height="300" fill="#1E3441"/>
+            <!-- ground -->
+            <rect y="230" width="640" height="70" fill="#162833"/>
+            <line x1="0" y1="230" x2="640" y2="230" stroke="#F3F2EC" stroke-opacity="0.35" stroke-width="2"/>
+            <g stroke="#F3F2EC" stroke-opacity="0.12" stroke-width="2">
+              <line x1="40" y1="262" x2="120" y2="262"/><line x1="200" y1="274" x2="300" y2="274"/>
+              <line x1="380" y1="258" x2="450" y2="258"/><line x1="500" y1="278" x2="600" y2="278"/>
+            </g>
+            <!-- dropoff pad -->
+            <rect x="505" y="226" width="120" height="8" fill="#F26A1B"/>
+            <g fill="#F3F2EC" font-family="'Big Shoulders Stencil Display', Impact, sans-serif" font-weight="900">
+              <text x="565" y="256" font-size="17" text-anchor="middle" letter-spacing="2">DROPOFF</text>
+              <text id="metal-pop" x="565" y="150" font-size="30" text-anchor="middle" fill="#F26A1B" opacity="0">
+                + METAL
+                <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.78;0.82;0.92;0.96;1" values="0;0;1;1;0;0"/>
+              </text>
+            </g>
+
+            <!-- tank wreck -->
+            <g transform="translate(330 217)">
+              <g>
+                <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite"
+                  keyTimes="0;0.28;0.36;0.76;0.86;0.87;1"
+                  values="0 0;0 0;-45 -16;213 -16;213 -16;0 0;0 0"/>
+                <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+                  keyTimes="0;0.83;0.85;0.95;0.97;1" values="1;1;0;0;1;1"/>
+                <g>
+                  <animateTransform attributeName="transform" type="scale" dur="10s" repeatCount="indefinite"
+                    keyTimes="0;0.36;0.44;0.86;0.87;1" values="1;1;0.6;0.6;1;1"/>
+                  <rect x="-30" y="-2" width="60" height="14" rx="5" fill="#4A5B66"/>
+                  <path d="M-26 -2 L-18 -16 H20 L28 -2 Z" fill="#5B6D79"/>
+                  <rect x="-10" y="-26" width="26" height="12" rx="2" fill="#4A5B66"/>
+                  <rect x="14" y="-22" width="26" height="4" fill="#4A5B66" transform="rotate(14 14 -20)"/>
+                  <path d="M-22 -4 L-12 -14 M2 -2 L10 -12" stroke="#F26A1B" stroke-width="2" fill="none"/>
+                </g>
+              </g>
+            </g>
+
+            <!-- gatherer forklift, facing right -->
+            <g>
+              <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite"
+                keyTimes="0;0.25;0.36;0.76;0.86;1"
+                values="80 230;232 230;232 230;490 230;490 230;80 230"/>
+              <rect x="-44" y="-42" width="66" height="28" rx="3" fill="#F26A1B"/>
+              <path d="M-36 -42 V-70 H-4 V-42" fill="none" stroke="#F3F2EC" stroke-width="4" stroke-linejoin="round"/>
+              <rect x="-36" y="-70" width="32" height="4" fill="#F3F2EC"/>
+              <rect x="28" y="-76" width="7" height="68" fill="#F3F2EC"/>
+              <rect x="35" y="-16" width="36" height="5" fill="#F3F2EC"/>
+              <circle cx="-26" cy="-11" r="11" fill="#0F1C25" stroke="#F3F2EC" stroke-width="3"/>
+              <circle cx="12" cy="-9" r="9" fill="#0F1C25" stroke="#F3F2EC" stroke-width="3"/>
+            </g>
+          </svg>
+          <figcaption>A destroyed unit leaves a wreck worth half its cost. A gatherer lifts it, carries it to the dropoff and turns it into metal.</figcaption>
+        </figure>
+      </div>
+      <div class="stripe" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2>How it plays</h2>
+        <p class="intro">You build the base. The army runs itself. There are two resources: energy, which generators produce on their own, and metal, which you collect from map nodes and wrecks. Metal on the map runs out, so wrecks matter.</p>
+        <ol class="steps">
+          <li>
+            <h3>Place a building</h3>
+            <p>Press an icon, drag it onto the map and let go. It starts working the moment it lands.</p>
+          </li>
+          <li>
+            <h3>Units build themselves</h3>
+            <p>Each building turns out units as fast as it can. You never queue or select.</p>
+          </li>
+          <li>
+            <h3>They march and fight</h3>
+            <p>Units head for the nearest enemy and attack what they meet. With no enemy units left, they go for buildings.</p>
+          </li>
+          <li>
+            <h3>Wrecks drop</h3>
+            <p>A destroyed unit leaves a wreck worth half its cost. Drones blow up on impact and leave nothing.</p>
+          </li>
+          <li>
+            <h3>Gatherers haul it home</h3>
+            <p>Forklift gatherers carry wrecks to the dropoff. Each team can field four at a time.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="units">
+      <div class="wrap">
+        <h2>The units</h2>
+        <p class="intro">Fixed camera, flat ground, no zoom. You read the fight by who is where.</p>
+        <table class="units">
+          <caption>Units in the current test build</caption>
+          <tbody>
+            <tr><th scope="row">Dog</th><td>A robot dog with a turret on its back. Walks on four legs.</td></tr>
+            <tr><th scope="row">Tank</th><td>Turret and barrel with recoil. Fires at ground targets.</td></tr>
+            <tr><th scope="row">Helicopter</th><td>A twin-rotor gunship that flies above the field and fires homing rockets.</td></tr>
+            <tr><th scope="row">SAM</th><td>A wheeled launcher on a truck. Tracks aircraft and shoots them down with homing missiles.</td></tr>
+            <tr><th scope="row">Gatherer</th><td>A forklift that carries wrecks to the dropoff. Steers from the rear wheels, like the real thing.</td></tr>
+            <tr><th scope="row">FPV Drone</th><td>Flies into its target and explodes. Leaves no wreck.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="campaign">
+      <div class="wrap split">
+        <div>
+          <h2>Iron River</h2>
+          <p class="intro">A story campaign built for first-timers. Each episode teaches one unit or building, starting with the Gatherer, and every episode plays on its own map. Episode 1 is playable in the current test build.</p>
+        </div>
+        <div class="panel">
+          <h3>In development</h3>
+          <ul>
+            <li>Co-op against AI</li>
+            <li>1v1 matches</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="wrap">
+        <h2>Screenshots</h2>
+        <div class="gallery">
+          <figure>
+            <div class="shot"><span>Screenshot coming soon</span><img src="/assets/shot-1.jpg" alt="Salvage Wars gameplay: units advancing across the map" loading="lazy" onerror="this.remove()"></div>
+          </figure>
+          <figure>
+            <div class="shot"><span>Screenshot coming soon</span><img src="/assets/shot-2.jpg" alt="Salvage Wars gameplay: a gatherer carrying a wreck" loading="lazy" onerror="this.remove()"></div>
+          </figure>
+          <figure>
+            <div class="shot"><span>Screenshot coming soon</span><img src="/assets/shot-3.jpg" alt="Salvage Wars gameplay: placing a building" loading="lazy" onerror="this.remove()"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beta">
+      <div class="wrap split">
+        <div>
+          <h2>Join the beta</h2>
+          <p class="intro">The Android test runs through Google Play, so we need the email address of your Google account to add you. Signing up is optional. We only email you about the test.</p>
+        </div>
+        <form class="panel" id="beta-form" data-endpoint="/api/signup" novalidate>
+          <div class="field">
+            <label for="b-nick">Nickname</label>
+            <input type="text" id="b-nick" name="nickname" autocomplete="nickname" maxlength="40" required>
+          </div>
+          <div class="field">
+            <label for="b-email">Email for your Google account</label>
+            <input type="email" id="b-email" name="email" autocomplete="email" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="b-device">Phone model <span class="hint" style="display:inline">(optional)</span></label>
+            <input type="text" id="b-device" name="device" maxlength="60" placeholder="For example: Galaxy A54">
+          </div>
+          <div class="trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>I agree to the <a href="/privacy.html">privacy policy</a> and to be emailed about the beta.</span>
+          </label>
+          <button class="btn" type="submit">Join the beta</button>
+          <p class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="feedback">
+      <div class="wrap split">
+        <div>
+          <h2>Send feedback</h2>
+          <p class="intro">Found a bug, have an idea, or think a unit is too strong? Tell us. You don't need to sign up for the beta to send feedback.</p>
+        </div>
+        <form class="panel" id="feedback-form" data-endpoint="/api/feedback" novalidate>
+          <div class="field">
+            <label for="f-cat">What is it about?</label>
+            <select id="f-cat" name="category" required>
+              <option value="bug">A bug</option>
+              <option value="idea">An idea</option>
+              <option value="balance">Balance: a unit is too strong or too weak</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Your message</label>
+            <textarea id="f-msg" name="message" maxlength="2000" required></textarea>
+            <span class="hint">For a bug, say what you did and what happened.</span>
+          </div>
+          <div class="field">
+            <label for="f-build">Game version <span class="hint" style="display:inline">(optional)</span></label>
+            <input type="text" id="f-build" name="build" maxlength="40">
+          </div>
+          <div class="field">
+            <label for="f-contact">Email, if you want a reply <span class="hint" style="display:inline">(optional)</span></label>
+            <input type="email" id="f-contact" name="contact" autocomplete="email" maxlength="120">
+          </div>
+          <div class="trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>I agree to the <a href="/privacy.html">privacy policy</a>.</span>
+          </label>
+          <button class="btn" type="submit">Send feedback</button>
+          <p class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <a class="brand" href="/">Salvage Wars</a>
+        <p>Made by DEVELOPER_NAME. Questions or requests to delete your data: <a href="mailto:CONTACT_EMAIL">CONTACT_EMAIL</a></p>
+      </div>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="/privacy.html">Privacy policy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/site.js"></script>
+</body>
+</html>

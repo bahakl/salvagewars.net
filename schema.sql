@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS signups (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at TEXT NOT NULL,
+  nickname TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  device TEXT
+);
+
+CREATE TABLE IF NOT EXISTS feedback (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at TEXT NOT NULL,
+  category TEXT NOT NULL,
+  message TEXT NOT NULL,
+  build TEXT,
+  contact TEXT
+);
