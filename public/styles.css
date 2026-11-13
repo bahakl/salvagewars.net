@@ -169,6 +169,7 @@ h2 {
 .gallery figure { flex: 0 0 min(72vw, 300px); margin: 0; scroll-snap-align: start; }
 .gallery img { display: block; width: 100%; height: auto; border: 2px solid var(--steel); box-shadow: 6px 6px 0 var(--steel); background: var(--steel); }
 .gallery figcaption { margin-top: 14px; font-size: 0.95rem; }
+h3.gallery-title { margin: 44px 0 0; }
 @media (min-width: 900px) {
   .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 300px)); gap: 40px; margin-inline: 0; padding: 0; overflow: visible; }
   .gallery figure { flex: none; }
