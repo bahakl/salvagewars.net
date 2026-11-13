@@ -7,7 +7,7 @@ Static site plus a small Cloudflare Worker for the beta sign-up and feedback for
 1. Find and replace two placeholders in `public/index.html`, `public/privacy.html` and `public/terms.html`:
    - `CONTACT_EMAIL` with the email address players can write to
    - `DEVELOPER_NAME` with the name or studio you want shown
-2. Add screenshots as `public/assets/shot-1.jpg`, `shot-2.jpg`, `shot-3.jpg` (16:9). Until they exist, the page shows "Screenshot coming soon".
+2. Swap in better screenshots whenever you have them: replace `public/assets/shot-1.jpg`, `shot-2.jpg` and `shot-3.jpg` (portrait, about 500×900).
 3. Add the Google Play link once the game is live: replace the "Google Play: coming soon" span in `public/index.html` with a link.
 4. Read `public/privacy.html` and `public/terms.html` and change anything that isn't true for your game (retention periods, ads, analytics, accounts). They are plain templates, not legal advice.
 
