@@ -5,7 +5,7 @@ Static site plus a small Cloudflare Worker for the beta sign-up and feedback for
 ## Before you publish
 
 1. Find and replace two placeholders in `public/index.html`, `public/privacy.html` and `public/terms.html`:
-   - `kalmuratov@gmail.com` with the email address players can write to
+   - `hello@salvagewars.net` with the email address players can write to
    - `Baha Kalmurat` with the name or studio you want shown
 2. Swap in better screenshots whenever you have them: replace `public/assets/shot-1.jpg`, `shot-2.jpg` and `shot-3.jpg` (portrait, about 500×900).
 3. Add the Google Play link once the game is live: replace the "Google Play: coming soon" span in `public/index.html` with a link.
